@@ -1,0 +1,17 @@
+﻿@model IEnumerable<string>
+@{
+    ViewData["Title"] = "ImageShow";
+}
+
+<h1>ImageShow</h1>
+
+@foreach (var item in Model)
+{
+    <img src="~/Images/@item" style="width:100px, height:100px; float:left; border:1px solid"/>
+    <h3>@item</h3>
+}
+
+<form method="post">
+    <input type="text" name="name"/>
+    <input type="submit" value="Sil"/>
+</form>
